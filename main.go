@@ -6,8 +6,9 @@ import (
 	"sort"
 )
 
+// sr = Stable Release
 func main() {
-	raw := []string{"v2020.6.10-alpha.0", "v2020.6.10-v.0", "v2020.6.10-v.10", "v2020.6.10-v.2", "1.0", "v2020.7.1", "2", "0.4.2"}
+	raw := []string{"v2020.6.10-alpha.0", "v2020.6.10-sr.0", "v2020.6.10-sr.10", "v2020.6.10-sr.2", "1.0", "v2020.7.1", "2", "0.4.2"}
 	vs := make([]*semver.Version, len(raw))
 	for i, r := range raw {
 		v, err := semver.NewVersion(r)
